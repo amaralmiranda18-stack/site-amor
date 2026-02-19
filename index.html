@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa História</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(180deg, #fff7f0, #ffffff);
+      color: #333;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  url('imagens/fundo2.jpeg') center/cover no-repeat;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      max-width: 700px;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1.8rem;
+      color: #d36b2c;
+      position: relative;
+      font-weight: 700;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, #d36b2c, #f2a36b);
+      margin-top: 0.5rem;
+      border-radius: 2px;
+    }
+
+    /* ===== ESTILO DE CARTA ===== */
+    section p,
+    .timeline p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 2;
+      text-align: justify;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline .moment {
+      margin-bottom: 3.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid #f2a36b;
+    }
+
+    .timeline span {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #d36b2c;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .secret {
+      position: absolute;
+      inset: 0;
+      background: rgba(211, 107, 44, 0.92);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      border-radius: 16px;
+    }
+
+    .photo.active .secret {
+      opacity: 1;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #fff0e4;
+    }
+
+    .timeline-photo {
+  width: 100%;
+  max-width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 1rem 0 1.2rem 0;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nossa História</h1>
+    <p>Este site é um pedacinho do que somos, do que vivemos e do amor que construímos dia após dia.</p>
+  </header>
+
+  <section>
+    <h2>Como tudo começou</h2>
+    <p>
+      A gente se conheceu quase sem perceber. Foi numa manhã de sol, durante uma reunião de trabalho naquela mesma escola onde, um dia, 
+      eu fui aluna — como se a vida estivesse fechando um ciclo só para abrir outro, muito mais bonito. A reunião parecia longa, quase entediante, 
+      até que entre olhares cúmplices começamos a nos comunicar por pequenos bilhetes. O tédio virou riso contido, a formalidade virou curiosidade, 
+      e ali, sem alarde, algo começou.
+Depois vieram as afinidades que não pedem licença: leituras compartilhadas, conversas que atravessavam o dia, horas de ligação em que o tempo 
+simplesmente deixava de existir. O que nasceu leve foi ganhando espaço, cuidado e presença, até que se tornou impossível não dividir pensamentos, 
+silêncios e momentos. Dividir a vida passou a ser natural.
+Nossa relação sempre foi simples e cheia de parceria. Juntas, fizemos comidas, lemos livros, fomos a restaurantes — e em tudo havia esse jeito calmo 
+de estar com você que sempre me trouxe paz. O pedido de namoro veio do mesmo modo que o nosso amor: discreto, verdadeiro e cheio de significado.
+ Foi numa noite, no quarto da sua casa, onde tantas vezes ficamos. Eu escrevi doze cartas à mão e, sentada na cama, te pedi para viver comigo os dias calmos
+  e também as tempestades inesperadas da vida. E foi assim, entre sorrisos, bilhetes e pôr do sol, que chegamos até este dia lindo, cercadas de amor.
+Meus olhos já tinham te avistado no ano anterior, em 2024, mas foi em janeiro de 2025 que eu enxerguei, na sua enxaqueca, a oportunidade perfeita para puxar assunto com você. 
+E ali, naquele mês que antes não significava nada para mim, eu fui me aproximando, te conhecendo ainda mais na sua forma mais linda, pura e genuína. Naquela escola que parecia 
+tão entediante, eu percebi que o amor que procurei por anos usava uma calça preta de alfaiataria, uma blusa preta com um decote revelador, acessórios prateados e lábios adornados
+ por um batom vermelho com gloss — uma beleza que, até hoje, eu não encontro palavras capazes de descrever.
+Por horas, dias e meses, eu desejei beijar a sua boca. Desejei você comigo. E quando as férias acabaram, algo especial nasceu em mim — algo que, quanto mais eu 
+tentava fugir, mais a vida me puxava para perto de você.
+Já tínhamos tanto em comum: pessoas, lugares, trabalho. E ainda assim, por tanto tempo, não trocamos uma palavra. Porque a vida estava nos guardando o melhor: 
+abraços, beijos, carinhos, amor, alegria, vida. Começamos a escrever a nossa história em janeiro — e hoje novamente é janeiro — mas a nossa história já 
+está escrita e, mais do que isso, está sendo vivida da forma mais linda possível.
+O mês que antes não tinha significado algum, hoje é o meu favorito. Porque nele tem tudo da gente. E muito mais de você. Como escreveu Guimarães Rosa, 
+“o amor é assim: pega a gente desprevenido e, quando a gente vê, já virou destino”. Você é o meu janeiro, meu destino e a minha escolha diária. 
+
+    </p>
+  </section>
+
+  <section>
+    <h2>Nossa linha do tempo</h2>
+    <div class="timeline">
+      <div class="moment">
+        <span>📅 Primeiro encontro: 03/06/2025</span>
+        <p>Antes mesmo do nosso primeiro encontro oficial, a vida já insistia em nos encontrar.
+Houve tantos pequenos encontros antes do dia 03 de junho — encontros silenciosos,
+sutis, inevitáveis. Antes dessa data, nós já tínhamos nos abraçado, nos conhecido de verdade,
+desenhado uma na pele da outra. Já tínhamos rido e chorado, trocado pequenos presentes, 
+dividido silêncios que diziam mais que palavras. Fomos colo, casa, abrigo e aconchego. 
+Sentamos juntas para estudar, fomos descanso uma para a outra… e até o nosso primeiro beijo já tinha acontecido.
+E ainda assim, meu amor, nada se compara ao frio na barriga que senti no nosso primeiro encontro — aquele que o mundo resolveu chamar de oficial.
+No dia 03 de junho, fomos ao Shopping Avenida assistir Premonição 6. Naquela ansiedade doce da espera, recebi sua mensagem dizendo que você estava do outro
+lado do shopping. Caminhei até você com o coração apressado, feliz, quase sem chão. E então você me entregou o primeiro buquê das minhas flores favoritas: lírios.
+Eu te olhei tímida, sorrindo sem saber quais palavras poderiam dar conta de quão linda você estava — a saia preta, o corset preto, o tênis branco. 
+Ali, sem precisar dizer nada, tive a maior certeza de todas. Era você. Não precisei explicar nada ao meu coração, porque no fundo ele já te amava. 
+Como naquela frase de Guimarães Rosa que agora faz todo sentido para mim: “os outros eu conheci por ócio e acaso” — você, eu reconheci como destino.
+Não prestei atenção no filme. Passei aquelas duas horas te observando de canto, como quem tem medo de piscar e perder o milagre. Quando acabou, 
+fomos comer e depois ficamos horas — que pareceram segundos — conversando no estacionamento.
+Nosso primeiro encontro terminou depois da meia-noite e, naquela noite, eu tive novamente a maior certeza de todas:
+não tinha como não ser você. Eu tinha acabado de viver o meu primeiro encontro oficial com a mulher mais linda e inteligente do mundo.
+A mulher que hoje, graças a Deus, eu chamo de namorada — e de amor da minha vida.
+</p>
+      </div>
+      <div class="moment">
+        <span>📅 Primeiro "eu te amo": Agosto de 2025</span>
+        <p>Meu amor, Alícia Ellen,
+Depois do nosso primeiro encontro, junho se abriu diante de nós como quem já sabia o que estava por vir. Vivemos tanto em tão pouco tempo que o calendário nunca mais foi 
+só calendário — virou memória, cheiro, pele e promessa. Eu viajei para te encontrar no São João, atravessando distâncias que já não significavam nada, porque o meu destino 
+era você. Cozinhamos juntas na sua casa, partilhamos um jantar que tinha gosto de futuro, e nos entregamos uma à outra pela primeira vez com a coragem de quem sente que está 
+exatamente onde deveria estar.
+Antes de eu ir passar um mês do outro lado do Brasil, fizemos uma promessa. Simples e imensa: ser pacientes, nos esperar, cuidar do que estava nascendo. Julho me levou para
+longe, mas nunca para fora de você. Todos os dias eu te escrevi, porque precisava que você soubesse — e talvez eu também — que aqui, em mim, tudo já era seu. Cada carta era 
+uma forma de te tocar apesar da distância, de te dizer que o amor já tinha feito morada.
+Quando voltei, no início de agosto, deitadas na sua cama, com o quarto iluminado apenas pela fresta de luz que atravessava a janela, o mundo parecia pequeno diante do que 
+sentíamos. Ali, imensas no nosso amor, eu finalmente disse em voz alta três palavras que já estavam gravadas em mim havia tempo: eu te amo, Alícia Ellen. Depois de já tê-las
+desenhado no seu corpo, eu compreendi — com a calma das certezas verdadeiras — que eu precisava de você na minha vida, porque tudo, absolutamente tudo, com você melhora.
+A gente se olhou, se beijou, e como resposta a esse amor sereno que escolhemos viver, adormecemos. E desde então, eu nunca mais deixei de te dizer que te amo. Nunca deixei 
+de mostrar isso na rotina, nos gestos pequenos, no cuidado diário, na forma como te faço viver o meu amor e o nosso.
+Sou completamente apaixonada pelo que construímos, Alícia. Ninguém me teve — e jamais terá — da forma inteira e completa que só você tem. Te amar é uma dádiva, meu amor. 
+E como diria Guimarães Rosa, “o que a vida quer da gente é coragem”. A minha coragem tem o seu nome, o seu abraço, o seu amor.
+
+</p>
+      </div>
+      <div class="moment">
+        <span>📅 Um dia inesquecível: 30/01/2026</span>
+        <p>Todos os dias ao seu lado se tornam especiais, quase sagrados. Porque neles há amor, há alegria e, acima de tudo, há você — há nós duas.
+Não existe nada mais significativo e bonito do que dividir a vida com você, do que construir memórias que não se apagam, apenas se aprofundam com o tempo.
+Mas o dia 30 de janeiro de 2026… ah, esse dia foi diferente. Foi simplesmente lindo. A noite estava em estado de poesia, e você — você dispensa qualquer tentativa de 
+descrição. Ainda assim, te olhar enquanto a lua desenhava seu corpo sobre as ondas foi algo que me tirou o fôlego, como se o mundo tivesse parado só para que eu te contemplasse.
+Para ter certeza de que aquele instante também morava em você, eu perguntei. E a sua resposta encontrou a minha no mesmo lugar: no coração. Nós nos amamos, como sempre fizemos,
+mas naquela noite havia algo a mais. Estávamos no seu lugar favorito — o mar — olhando para o meu astro favorito — a Lua. E era como se recebêssemos, em silêncio, a bênção da 
+rainha das águas, Yemanjá. Fomos felizes não apenas pelo que fomos e vivemos naquelas águas noturnas, mas pela certeza tranquila e contínua de que nós somos amor — e muito mais
+  do que imaginamos ser.
+Juntas, somos imbatíveis quando o assunto é amor e felicidade. O seu corpo é lindo de todas as formas: com qualquer roupa, sem nenhuma, mas molhado e desenhado pela luz do luar… 
+isso é de uma beleza que não cabe em palavras. É daqueles instantes que a gente guarda na alma para sempre.
+O meu dia inesquecível foi te amar enquanto a lua beijava o mar. E como cantou Gal Costa, “meu amor, não tenha medo do tempo” 
+porque o nosso amor sabe nadar em águas profundas, sob qualquer lua, em qualquer mar.
+</p>
+
+</div>
+      <div class="moment">
+        <span>📅 Primeira vez que dormimos juntas: 24/05/2025</span>
+        <p>
+           Foi no mês de maio, quando o seu grande amor — aquele pequeno ser de quatro patas que atende, 
+           com nobreza e teimosia, pelo nome de Eros — enfrentava dias difíceis. Na noite do dia 24, você sentia cólicas intensas e precisava acordar diversas
+            vezes para medicá-lo. A sua casa estava silenciosa, vazia, e a solidão tornava tudo mais pesado.
+Lembro-me com absoluta clareza daquele momento: eram quase vinte e três horas quando você me escreveu dizendo que estava com dor e receio de ficar sozinha.
+ Não hesitei. Levantei-me da cama, ainda de pijama, chamei o carro e segui para sua casa, movida por algo que eu já reconhecia como amor, mesmo que você ainda 
+ não pudesse nomeá-lo.
+Chegando lá, fiz o que meu coração insistia em fazer: cuidei de você. Massageei sua barriga, acompanhei cada vez que você se levantou para medicar o Eros, 
+observei seu corpo encolhido de dor sobre a cama. Em seguida, esquentei água, umedecei um pano e o depositei sobre sua barriga, na tentativa de lhe oferecer 
+algum alívio. Você então repousou a cabeça em meu ombro e adormeceu em pequenos cochilos, enquanto eu permanecia desperta, velando seu descanso com toda a
+ ternura que cabia em mim.
+Nunca lhe confessei isto: passei a noite inteira em claro, olhando para você e desejando, em silêncio, que os planos de Deus coincidissem com os meus — 
+que você deixasse seus medos e reservas de lado e me permitisse apenas uma chance de mostrar tudo o que ainda estava por vir. Naquele mesmo canto onde nosso 
+primeiro beijo aconteceu, eu pedi a Deus que colocasse em seu coração o desejo de me escolher. E, enquanto você dormia, eu lhe fazia carinho, abraçada a você, 
+com a esperança pulsando calma, porém firme, dentro de mim.
+Quando o Sol despertou, beijei-lhe a testa e parti. A caminho de casa, senti-me radiante por ter dividido a noite inteira ao seu lado, ainda que uma parte de 
+mim carregasse a tristeza suave de quem sabe que ainda não possuía você da forma que tanto desejava. Ainda assim, eu estava decidida a esperar. E esperei.
+ Ouvi você, respeitei seu tempo, acolhi seus receios — porque, mesmo sem perceber, o amor já amanhecia dentro de nós com aquela mesma luz do Sol.
+Para mim, aquela noite foi simplesmente extraordinária porque tinha você. E eu faria tudo novamente, sem alterar um único gesto, se soubesse que hoje caminharíamos
+ tão gigantes juntas.
+Eu a amo imensamente. E, a título de conhecimento — ou de destino — Deus ouviu as minhas orações e permitiu que eu experimentasse a face mais luminosa do amor: a sua, Ellen.
+
+</p>
+
+
+</div>
+      <div class="moment">
+        <span>📅 Primeiro feriado juntas: 20/04/2025</span>
+        <p>
+          Recordo com carinho a Páscoa que dividimos — o nosso primeiro feriado juntas. 
+          Era um território novo, frágil e doce, onde tudo ainda estava sendo descoberto com cuidado, como se cada gesto pudesse revelar algo 
+          profundo demais para ser dito em voz alta. Há sempre uma primeira vez para cada coisa importante, e hoje sei que aquela Páscoa marcou 
+          silenciosamente o início de tudo.
+Lembro-me da minha ansiedade quase desajeitada em lhe entregar o chocolate que escolhi com tanto zelo e o gloss que você mencionara quase sem intenção,
+ mas que para mim soou como um pedido sutil. Eu queria lhe agradar, queria ver seus olhos acendendo daquele jeito que só você tem. Ao mesmo tempo, 
+ havia um receio discreto dentro de mim: era a primeira vez que eu passaria todo um feriado ao lado de quem, mais tarde, se tornaria a mulher da minha vida. 
+ Drummond dizia que “o amor é grande e cabe no breve espaço de um beijo”; mas naquele dia eu percebi que ele também cabe na expectativa, no gesto simples, 
+ naquilo que se oferece com o coração tremendo.
+Tinha medo de ficar tantas horas sozinha com você, não pela convivência, mas pela possibilidade de que meus sentimentos escapassem do controle e se 
+derramassem diante dos seus. Você já carregava em si algo de único, de absolutamente ímpar, capaz de me deixar inquieta e ao mesmo tempo em paz. Estar ao seu 
+lado era como estar à beira de algo enorme que eu ainda não compreendia por completo, mas que me atraía irremediavelmente.
+Quando você me entregou sua carta e o chocolate, senti uma felicidade tão intensa e tão pura que passei meses acreditando que tinha sido você 
+quem havia preparado tudo. E, mesmo depois de saber que não foi assim, permaneci achando mais bonito acreditar nessa versão — porque, no fim, 
+o que importava não era a origem do presente, mas o fato de ter vindo de você, da sua escolha, do seu gesto. Às vezes, o amor nos encanta justamente 
+nessas pequenas armadilhas que o cotidiano oferece.
+Aquela Páscoa foi um pequeno intervalo no tempo, mas deu espaço para que o amor começasse a nascer sem pressa, como quem observa o amanhecer pela 
+primeira vez. A vida necessita dessas pausas: são nelas que o futuro encontra brechas para entrar. E ali, naquele feriado singelo, o nosso futuro 
+começou a se insinuar, leve, mas inevitável.
+Se eu soubesse o quanto seríamos grandiosas juntas, teria pedido ao mundo para que aquele fim de semana durasse mais. Guardaria cada segundo com mais 
+consciência. Porque hoje, ao revisitá-lo, percebo que tudo já estava ali — a ternura, o cuidado, o desejo de permanecer. E no fundo, mesmo sem nomear, eu já sabia: 
+você seria minha casa. E eu estava, mesmo sem admitir, pronta para ser a sua.  
+
+</p>
+
+</div>
+      <div class="moment">
+        <span>📅 Primeira vez que ficamos longe uma da outra: 04/07/2025</span>
+        <p>
+          Há ausências que pesam como se fossem feitas de chumbo. E aqueles trinta dias em São Paulo foram exatamente assim: um tempo suspenso, 
+          um intervalo doloroso entre aquilo que já éramos e aquilo que ainda estávamos aprendendo a ser — duas pessoas que se escolheram tão 
+          intensamente que o mundo pareceu pequeno demais quando tivemos que nos separar.
+Depois de tantas conversas, depois da decisão firme e doce de permanecermos juntas, era como se o universo tivesse conspirado para nos testar. 
+Nunca havíamos ficado longe uma da outra, e, de repente, eu precisava atravessar o estado, deixando você ali, na rodoviária, com aquele olhar que tentava 
+ser forte mas que traduzia perfeitamente o que as duas sentíamos: medo e amor, lado a lado.
+Quando você me entregou aquela cartinha, eu quase desabei. Segurei o papel como quem segura um amuleto, uma pequena casa portátil onde eu poderia 
+entrar sempre que o mundo ficasse frio demais. E foi exatamente isso que fiz: li sua carta no avião inteiro, tentando imprimir na memória cada palavra, 
+cada linha, cada traço da sua letra — como se, fazendo isso, você estivesse ali comigo, ao meu lado, ocupando o assento vazio que, por direito, era seu.
+Em São Paulo, meu coração parecia bater fora do ritmo.
+A saudade doía fisicamente, como se fosse uma ferida aberta.
+E havia um medo silencioso, insistente: o medo de voltar e tudo estar diferente.
+O medo de ser deixada.
+O medo de que a distância fizesse com a gente aquilo que tantas vezes a vida tentou fazer comigo: quebrar o que eu guardava com carinho.
+Mas, ao mesmo tempo, havia algo maior que o medo — era você.
+A lembrança do seu abraço, o seu cheiro guardado na minha roupa, o som da sua voz na minha cabeça, tudo isso lutava contra a insegurança e vencia, dia após dia.
+Eu te escrevia cartas.
+Todos os dias.
+Escrevia para você, mas também escrevia para mim, para segurar meu coração com as duas mãos e impedir que ele se fragmentasse sob o peso da distância.
+Era a minha forma de dizer o que eu ainda não tinha coragem de verbalizar:
+eu te amo profundamente.
+E, mesmo sem dizer, eu esperava que você sentisse.
+Nesse tempo longe, eu lembrava do que Elayne Baeta escreve sobre os amores que nascem entre duas mulheres: “a gente ama com medo, mas ama mesmo assim, 
+porque certas pessoas chegam como destino.” Era exatamente isso. Eu amava com medo, mas te amava — e isso me sustentava.
+Lá em São Paulo, cada esquina parecia cinza. As luzes eram bonitas, os prédios eram altos, mas tudo era triste sem você. A cidade inteira parecia me 
+lembrar da sua ausência.
+Eu escutava as músicas que me lembravam você — e todas me lembravam —, relia sua carta em silêncio, chorava baixinho enquanto pensava no quanto você 
+tinha se tornado parte essencial do meu mundo.
+E, entre lágrimas, eu entendia Clarice Lispector quando ela diz que “a saudade é um pouco de fome.” E eu sentia fome de você: fome do seu abraço, da sua voz, 
+da nossa casa que ainda nem tinha paredes, mas já existia em nós.
+E, apesar da dor, havia uma verdade calma, persistente:
+quando o amor é real, ele não se quebra com a distância;
+ele se fortalece.
+E foi exatamente isso que aconteceu.
+Hoje, quando olho para trás, entendo que aqueles trinta dias foram a prova mais bonita de que, mesmo longe, mesmo com medo, era você. Sempre foi você.
+E aquela saudade imensa — doída, profunda, quase insuportável — só existia porque o que a gente tem é raro, é grande, é verdadeiro.
+E é por isso, meu amor, que hoje eu sei:
+não importa o lugar do mundo onde eu esteja,
+se não for com você, nada tem cor.
+Com toda a saudade que já senti na vida,
+e todo o amor que sinto agora,
+Sua.
+
+
+</p>
+
+      </div> 
+      <div class="moment">
+      <span>📅 Primeira vez que o céu se abriu para nós: 12/08/2025</span>
+      <p> 
+        Há dias que não pertencem ao calendário — pertencem ao coração.
+E aquela terça-feira, 12 de agosto, ficará para sempre guardada no meu como um lugar onde o tempo virou casa, onde o vento soprou mais leve e onde o mundo, 
+pela primeira vez em muito tempo, me pareceu possível de novo.
+Terça-feira… um dia que, para nós duas, sempre carregou um significado quase sagrado. Um dia comum para o resto do mundo, mas extraordinário para nós,
+ porque foi em tantas terças que nossas certezas nasceram. E, como se não bastasse, ainda era dia par, esse número que acompanha a nossa história como um 
+ sinal silencioso do destino, como se o universo quisesse nos lembrar, o tempo todo, que o amor também tem ritmo — e o nosso sempre dançou na simetria.
+Aquele pôr do sol não foi apenas um pôr do sol.
+Foi a concretização de uma promessa que fizemos quando ainda nem tínhamos nos beijado, quando tudo entre nós era desejo contido, afeto escondido nos olhos, 
+sentimento que transbordava mas ainda não tinha nome. Prometemos que assistiríamos juntas ao laranja do fim de tarde — e quando finalmente aconteceu, foi tão maior, 
+tão mais bonito, tão mais nosso do que qualquer coisa que eu poderia ter imaginado.
+Porque ali, ao seu lado, eu podia segurar sua mão.
+Eu podia te beijar.
+Eu podia te olhar sem medo.
+Ali, no meio daquele céu alaranjado, eu soube com absoluta clareza que nós pertencíamos uma à outra, mesmo antes de dizermos isso em voz alta.
+E, talvez você nunca tenha percebido, mas aquele dia significou muito mais do que um encontro bonito.
+Depois do falecimento da minha avó, o mundo tinha perdido um pouco das cores.
+O horizonte parecia sempre distante, apagado, sem vida.
+E foi só naquele pôr do sol — o primeiro que vi com você — que eu voltei a enxergar o laranja ultra forte que sempre me fascinou. Foi olhando para os seus olhos castanhos, 
+refletindo o mesmo céu que eu, que senti algo que eu já não lembrava:
+a vida dizendo baixinho que estava tudo bem, que era seguro voltar a sorrir.
+E eu sorri.
+Sorri como quem volta para casa depois de muito tempo perdida.
+Sorri como quem encontra abrigo no peito de quem ama.
+Sorri porque você estava ali — e isso, por si só, reorganizou meu mundo inteiro.
+Eu nunca te agradeci por isso.
+Então, meu amor, deixo aqui o agradecimento que ficou preso na garganta por tanto tempo:
+obrigada por me lembrar que existe luz depois da tempestade.
+Obrigada por me mostrar que o sol sempre volta.
+Obrigada por ser o meu sol quando o céu parecia escuro demais para ser visto.
+Aquele pôr do sol foi o primeiro, mas não o último.
+Porque desde que você chegou, meu amor, meu horizonte nunca mais deixou de ser laranja.
+Com todo o meu céu,
+Sua.
+
+      </p>
+    </div> 
+
+    <div>
+       <div class="moment">
+      <span>📅 A nossa primeira vez: 28/06/2025</span>
+      <p>
+        Há dias que se tornam capítulos inteiros dentro de nós. E o 28 de junho é, para mim, um daqueles dias que o tempo não apaga, porque nele eu senti, 
+        com todas as fibras do meu corpo, que algo irrevogável acontecia entre nós. Algo que não se limita à memória — permanece vivo, latejando, sempre que penso em você.
+Cozinhamos juntas naquele fim de tarde como quem constrói um pequeno ritual, sem sequer perceber. O cheiro da comida, o vinho derramando macio pelas taças, 
+nossas conversas demoradas… tudo nos ia aproximando com a delicadeza de um destino paciente, desses que não pressiona, apenas conduz.
+E então eu te olhei.
+E naquele instante compreendi que não era mais possível conter o desejo que tremia dentro de mim. Era um chamado antigo, embora tão recém-descoberto. Um chamado seu.
+Senti, com uma nitidez que quase doeu, a vontade profunda de me entregar inteiramente a você — não como gesto impulsivo, mas como uma afirmação concreta, silenciosa 
+e absoluta do que já vivia em mim: “eu te amo e sou sua.”
+Quando finalmente nos entregamos, nossos corpos ainda carregavam uma timidez doce — os olhares que se desviavam por pudor, as mãos que hesitavam antes de tocar, 
+o coração acelerado que parecia querer dizer tudo que a boca ainda não sabia pronunciar.
+Mas, mesmo assim, foi tão maior do que eu imaginava…
+Foi amor.
+Mesmo sem palavras.
+Foi você.
+E havia, acima de tudo, respeito — esse lugar seguro onde o amor repousa e floresce. Era como se o mundo tivesse reduzido o tamanho até caber só em nós duas. 
+E, pela primeira vez, eu entendi aquela verdade que Carla Madeira descreve tão bem: “o amor é quando dois corpos se reconhecem como casa e passam a se escolher todos os dias.”
+Naquela madrugada, enquanto nossos corpos se encontravam, senti exatamente isso — o reconhecimento, a casa, o destino que deixou de ser acaso para se tornar escolha.
+Nos amamos devagar, com cuidado, como quem aprende um idioma precioso.
+Depois, adormecemos abraçadinhas — um abraço que até hoje é o lugar onde minha alma descansa.
+Talvez por isso a Carla Madeira disse que “o amor é feito de permanências silenciosas, desses gestos que repetimos sem perceber, porque escolhemos o outro até quando não 
+pensamos nisso.”
+E é assim que sinto você: permanência.
+Escolha.
+Constância.
+A verdade mais doce que meu corpo já conheceu.
+Aquele 28 de junho não foi apenas a primeira entrega.
+Foi o nascimento de tudo que viria depois — de tudo que ainda estamos construindo, vivendo, aprofundando. Foi o dia em que o amor deixou de ser possibilidade e se tornou certeza.
+E desde então, meu amor, eu te escolho.
+Todos os dias.
+Em todos os silêncios.
+Em todos os gestos.
+Em todos os futuros.
+
+
+      </p>
+    </div>
+    
+     <div>
+       <div class="moment">
+      <span>📅 Primeira viagem juntas: 31/12/2025</span>
+      <p>
+        Alguns meses depois de começarmos a escrever a nossa história, fizemos a nossa primeira viagem juntas para Salvador — a cidade que você tanto ama, 
+        e que agora carrega, para mim, o perfume da sua alegria.
+
+Era fim de ano. Em todos os cantos do mundo, pessoas se organizavam para assistir à queima de fogos e celebrar recomeços. 
+Conosco não poderia ser diferente. Desde o primeiro beijo que dei em sua boca, algo em mim já sabia: aquele ano seria nosso, e atravessaríamos o réveillon 
+de mãos dadas. Planejamos, sonhamos, escolhemos lugares — e, no dia 31/12/2025, partimos rumo ao cenário que faz os seus olhos brilharem.
+
+Mas a verdade, Ellen, é que o lugar poderia ser qualquer um, em qualquer latitude deste universo. Minha alegria seria a mesma, porque eu estava ao lado do amor 
+da minha vida, da mulher que mais sabe me fazer feliz neste mundo inteiro. Encerramos o ano juntas — eu e você — e isso, por si só, já era milagre suficiente.
+
+As praias de Salvador, que já são de uma beleza incontestável, pareciam ainda mais deslumbrantes refletindo o seu encanto. Era o último dia de 2025 e, ao mesmo 
+tempo, o primeiro sopro de um ano que também seria — e é — nosso. Nós estávamos lindas. Mas você… com aquela saia que parecia ter sido delicadamente costurada ao 
+seu corpo, flutuava. Havia em você uma graça quase etérea. Eu não conseguia parar de te olhar — existir, viver, sentir a cidade que te faz tão feliz.
+
+Assistimos à queima de fogos abraçadas. Nos beijamos sob o céu iluminado. E naquele instante — que também marcava a contagem regressiva para o seu aniversário — eu 
+agradeci a Deus pela nossa vida, pela nossa história, por ter me concedido você. Quis chorar. As lágrimas vieram aos olhos, mas eu as guardei, como quem guarda um segredo
+ precioso demais para dividir com o mundo.
+
+Foi a nossa primeira viagem. Nosso primeiro réveillon. Nossa primeira ansiedade compartilhada.
+
+Foram cinco dias inteiros de nós. Fomos às praias, conhecemos restaurantes, experimentamos o suco que você tanto queria provar. Jogamos uno com duas adolescentes 
+desconhecidas, caminhamos sem pressa, saímos de madrugada à procura de uma batata frita como se aquela fosse a missão mais importante do universo. Fomos nós — nas 
+nossas individualidades — e fomos também a nossa doce conjunção.
+
+Foi lindo. Foi mágico. Foi real. Foi a gente.
+
+E nada é mais belo e honesto do que sermos exatamente quem somos ao lado de quem amamos. E eu te amo — verdadeiramente.
+
+Em cada instante daquela viagem, tive ainda mais certeza de que o meu amor sempre te procurou. Sempre te pertenceu. Eu já era sua,
+ mesmo antes de saber o seu nome, porque o que sinto por você é leve, é puro, é sereno. O amor que sinto me torna melhor. Ele me faz querer ser melhor.
+  Ele me faz desejar que o mundo inteiro se transforme em algo mais digno de você.
+
+Salvador foi linda. Mas dormir todos os dias abraçadinha com você foi sublime. Acordar com o seu cheiro, dividir o silêncio, compartilhar o riso 
+— isso foi o verdadeiro espetáculo.
+
+Obrigada pelo meu maior presente, Ellen: o seu sorriso, os seus olhos, o seu corpo, a sua inteligência. Você.
+
+Obrigada por me permitir enxergar aquela cidade pelos seus olhos porque eles tornam tudo mais bonito. E Salvador, vista ao seu lado, tornou-se simplesmente inesquecível.
+
+Eu te amo.
+        </p>
+       </div>
+    
+       <div>
+        <div class="moment">
+      <span>📅 Primeira vez juntas no teatro: 06/08/2025</span>
+
+      <p>
+       Quando tudo entre nós ainda era desejo silencioso, sentimento guardado entre as dobras do segredo, você me confidenciou a sua paixão pelo 
+       teatro. E, tantas vezes, eu te imaginei sobre o palco — inteira, luminosa, entregue à arte que faz seus olhos brilharem. Eu me via na plateia,
+        orgulhosa, com o coração aceso, assistindo você viver aquilo que ama.
+
+Mas a nossa primeira ida juntas ao teatro foi diferente de tudo que eu havia sonhado — e, ainda assim, foi perfeita. Não era você no palco e eu na plateia.
+ Éramos nós duas, lado a lado, compartilhando o mesmo espetáculo e a mesma respiração.
+
+Fomos assistir à peça “Quitéria” no Centro de Cultura Amélio Amorim. A peça era linda, intensa, vibrante. Mas nada — absolutamente nada — superava você. 
+Seus encantos, sua empolgação ao comentar cada cena, sua admiração sincera pelas atrizes e pelos atores. Passei a noite te observando de canto de olho, encantada não 
+apenas com o que estava no palco, mas com o brilho que havia em você.
+
+Eu fui feliz naquela noite. Feliz pela arte, sim — mas, sobretudo, por estar ao lado da mulher mais linda do mundo. E porque, sem perceber, estávamos inaugurando a 
+nossa tradição de primeiras vezes.
+
+Nós combinávamos até no vestir: blusa marrom, calça jeans folgada preta, tênis, cabelos soltos. O típico casal que se encontra até nos detalhes. Havia uma harmonia
+ silenciosa entre nós, como se o mundo tivesse decidido, por algumas horas, conspirar a nosso favor.
+
+Eu te olhei com aquele amor que já transbordava e te entreguei flores enquanto esperávamos na fila. Junto delas, uma carta. Nela, eu dizia que estava imensamente
+ feliz por ir ao teatro com o meu amor — mas que seria ainda mais feliz quando voltássemos ali para te ver no palco. Porque te ver vivendo o que ama é uma das formas
+  mais bonitas de te amar.
+
+Cheguei alguns minutos depois de você naquele dia. Talvez, sem saber, eu já estivesse compensando todos os encontros futuros em que você chegaria atrasada — como quase
+ todos depois daquele. E, ainda assim, eu sempre esperaria. Porque esperar por você nunca é perda de tempo; é apenas mais uma forma de querer estar perto.
+
+Alícia Ellen, eu te amo muito.
+Para sempre.
+Com tudo o que tenho.
+Com tudo o que sou.
+
+Você me faz profundamente feliz. Obrigada por me escolher como a sortuda que recebe o seu amor, o seu carinho, o seu afeto. Amar você é um privilégio que eu abraço todos
+s os dias — como quem segura algo raro, precioso e eterno.
+      </p>
+       </div>
+  </section>
+
+  <section>
+    <h2>Nossos momentos</h2>
+    <div class="gallery">
+  <figure class="photo reveal">
+    <img src="imagens/foto1.jpeg" alt="Nosso momento 1">
+    <figcaption>Esse dia me fez ter certeza de nós 💛</figcaption>
+    <div class="secret">Aqui eu percebi que te amar seria inevitável.</div>
+  </figure>
+
+  <figure class="photo reveal">
+    <img src="imagens/foto2.jpeg" alt="Nosso momento 2">
+    <figcaption>Seu sorriso mudou tudo em mim ✨</figcaption>
+    <div class="secret">Toda vez que te olho, escolho você de novo.</div>
+  </figure>
+
+  <figure class="photo reveal">
+    <img src="imagens/foto3.jpg" alt="Nosso momento 3">
+    <figcaption>O mundo ficou mais leve com você 🌸</figcaption>
+    <div class="secret">Você é o meu lugar seguro.</div>
+  </figure>
+
+  <figure class="photo reveal">
+    <img src="imagens/foto4.jpeg" alt="Nosso momento 4">
+    <figcaption>Tudo contigo é leve e bonito. 💛</figcaption>
+    <div class="secret">Aqui eu percebi que nunca é o lugar, mas sempre a sua companhia.</div>
+  </figure>
+
+  <figure class="photo reveal">
+    <img src="imagens/foto55.jpeg" alt="Nosso momento 5">
+    <figcaption> Ter você comigo é a certeza de que a vida me ama.✨</figcaption>
+    <div class="secret">Você me traz sorte.</div>
+  </figure>
+
+  <figure class="photo reveal">
+    <img src="imagens/foto6.jpeg" alt="Nosso momento 6">
+    <figcaption> O nosso amor é a certeza de que a vida reservou o melhor para mim. 🌸</figcaption>
+    <div class="secret"> Qualquer lugar com você é casa.</div>
+  </figure>
+
+
+
+
+  </section>
+
+  <section>
+  <h2>Essa foto me lembra você porque…</h2>
+
+  <div class="timeline">
+
+    <div class="moment reveal">
+      <span>📸: A nossa liberdade é o que nos prende.</span>
+
+      <img src="imagens/Foto 3.jpeg" alt="Foto 1" class="timeline-photo">
+
+      <p>
+        Sem perceber,
+        você já estava mudando o meu jeito de ver o mundo.
+      </p>
+    </div>
+
+    <div class="moment reveal">
+      <span>📸: "Te vi de frente, sorridente, valente. Te amo tanto"</span>
+
+      <img src="imagens/Foto 33.jpeg" alt="Foto 2" class="timeline-photo">
+
+      <p>
+        O seu sorriso
+        sempre foi o meu ponto de paz.
+      </p>
+    </div>
+
+    <div class="moment reveal">
+      <span>📸: "Você deve acreditar no que é lindo, pode ir fundo, isso é que é viver."</span>
+
+      <img src="imagens/Foto 12.jpeg" alt="Foto 3" class="timeline-photo">
+
+      <p>
+        Até os dias simples
+        ficaram extraordinários ao seu lado.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  </section>
+
+  <section>
+    <h2>Uma mensagem para você</h2>
+    <p>
+        Querida Alícia Ellen,
+    <p>
+Esta é uma carta aberta porque o que sinto por você não cabe em segredo. É promessa porque escolho você todos os dias. 
+É agradecimento porque você mudou a forma como eu habito o mundo. E é sonho porque, quando penso no futuro, ele sempre tem o seu nome.
+Obrigada por ter chegado na minha vida sem pressa, quase sem perceber, e ainda assim ter se tornado tudo. Obrigada pelos dias simples que,
+ ao seu lado, viram extraordinários. Pelos silêncios que não pesam, pelos olhares que dizem mais do que qualquer palavra, pela parceria que
+  não exige esforço — apenas presença. Obrigada por ser casa, mesmo quando o mundo lá fora é tempestade.
+Eu te prometo cuidado. Prometo te amar nos dias claros e nos dias nublados, quando o riso vier fácil e quando ele precisar de colo para voltar. 
+Prometo paciência, escuta e verdade. Prometo nunca deixar o amor virar hábito vazio, mas sempre escolha consciente. Prometo segurar a sua mão
+ quando você duvidar, e te lembrar quem você é quando o mundo tentar te diminuir.
+Sonho com uma vida onde continuamos dividindo tudo: livros abertos na cama, comidas feitas sem receita, viagens que começam sem mapa, rotinas
+ que viram memória. Sonho com aniversários simples, domingos lentos, noites em que adormecemos sabendo que pertencemos uma à outra. Sonho com um
+  amor que cresce, amadurece e permanece, não porque é fácil, mas porque é real.
+Você me ensinou que amar não é perder-se, é expandir. Que o amor não aprisiona, acolhe. E que felicidade não é euforia constante, mas paz compartilhada. 
+E, com você eu entendi exatamente o que Guimarães Rosa quis dizer quando escreveu que o amor não precisa ser entendido, precisa apenas ser vivido.
+E eu quero viver você em todos os tempos que nos forem dados.
+Que o nosso futuro seja feito de coragem, ternura e escolhas diárias. Que a gente continue sendo abrigo, riso, mar e lua uma da outra. Que,
+ mesmo quando tudo mudar, a gente permaneça, porque o que é verdadeiro sabe ficar.
+Essa carta é aberta, Alícia Ellen, porque o meu amor por você também é: inteiro, livre e profundamente seu.
+
+
+</p>
+  </section>
+
+  <footer>
+    <p>Feito com amor para te lembrar que você é muito amada simplesmente por ser você. ❤️</p>
+  </footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(r => observer.observe(r));
+
+  document.querySelectorAll('.photo').forEach(photo => {
+    photo.addEventListener('click', () => {
+      photo.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
