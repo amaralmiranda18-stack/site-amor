@@ -211,10 +211,191 @@
   border-bottom: none;
 }
 
+/* ===== MENU LATERAL CURIOSIDADES ===== */
 
-  </style>
+.curiosidades-lateral {
+  position: fixed;
+  right: 0;
+  top: 10%;
+  width: 60px;
+  background: #f97725;
+  border-radius: 16px 0 0 16px;
+  box-shadow: -4px 6px 18px rgba(0,0,0,0.2);
+  transition: width 0.4s ease;
+  z-index: 999;
+  overflow: hidden;
+}
+
+/* quando abre */
+.curiosidades-lateral.open {
+  width: 450px;
+}
+
+/* título */
+.titulo {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  padding: 16px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* conteúdo escondido */
+.numeros {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+}
+
+.curiosidades-lateral.open .numeros {
+  opacity: 1;
+}
+
+/* itens */
+.item {
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* mensagem */
+.msg {
+  display: none;
+  margin-top: 6px;
+  background: rgba(255,248,240,0.85);
+  backdrop-filter: blur(4px);
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+   text-align: justify;
+   font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.video-lateral {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 220px;
+  background: rgba(0,0,0,0.15);
+  padding: 8px;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
+  z-index: 998;
+}
+
+.video-lateral video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+</style>
+
+
+
 </head>
 <body>
+
+  <div class="video-lateral">
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+</div>
+
+  <div class="curiosidades-lateral">
+
+  <div class="titulo" onclick="toggleCuriosidades()">
+    Curiosidades
+  </div>
+
+  <div class="numeros">
+
+    <div class="item" onclick="toggleMsg(event, this)">
+      1-
+      <div class="msg">Todas as vezes em que você está triste ou perdida em pensamentos que te machucam, 
+        eu começo a fazer perguntas aleatórias ou falar bobagens de propósito… só para te arrancar daquele lugar e te trazer de volta para mim.</div>
+    </div>
+
+    <div class="item" onclick="toggleMsg(event, this)">
+      2-
+      <div class="msg">Quase sempre eu acordo antes de você — e volto a dormir. Primeiro porque qualquer movimento meu te desperta. 
+        Segundo, e principalmente, porque eu amo acordar sentindo você me abraçando.</div>
+    </div>
+
+    <div class="item" onclick="toggleMsg(event, this)">
+      3-
+      <div class="msg">Quando vamos comer, eu sempre deixo a melhor parte para você.
+         Pode não parecer, mas é automático — porque, para mim, o melhor sempre é seu.</div>
+    </div>
+
+    <div class="item" onclick="toggleMsg(event, this)">
+      4-
+      <div class="msg">Todas as vezes que você me conta algo que eu já sei, eu finjo que não sei. Amo te ouvir explicando, 
+        amo o brilho dos seus olhos quando você se empolga… você fica absurdamente linda assim.</div>
+    </div>
+
+    <div class="item" onclick="toggleMsg(event, this)">
+      5-
+      <div class="msg">Eu faço piadas o tempo todo porque sou completamente apaixonada pelo seu sorriso.
+         Se eu puder ser o motivo dele, meu dia já valeu.</div>
+    </div>
+        <div class="item" onclick="toggleMsg(event, this)">
+      6-
+      <div class="msg">Eu sinto calor quase sempre… mas nunca reclamo, só para você me deixar dormir agarrada em você.</div>
+    </div>
+
+        <div class="item" onclick="toggleMsg(event, this)">
+      7-
+      <div class="msg">Eu amo quando você me oferece coisas mesmo sabendo que eu não gosto. 
+        Acho o gesto a coisa mais linda do mundo — é cuidado em forma de detalhe.</div>
+    </div>
+        <div class="item" onclick="toggleMsg(event, this)">
+      8-
+      <div class="msg">Eu amo tomar banho com você. É um dos meus momentos favoritos, porque a gente ri à toa, 
+        brinca e transforma o simples em inesquecível.</div>
+    </div>
+
+        <div class="item" onclick="toggleMsg(event, this)">
+      9-
+      <div class="msg">Eu amo te esperar para comer e para ver vídeos juntas. A verdade? 
+        Eu quase nunca presto atenção no vídeo — fico observando suas reações, suas risadas, suas expressões.</div>
+    </div>
+        <div class="item" onclick="toggleMsg(event, this)">
+      10-
+      <div class="msg">Às vezes eu nem estou com tanta vontade de comer ou fazer algo… mas, se você quer muito, 
+        eu faço. E digo que também queria, só para ver você feliz. Porque a sua felicidade sempre vai ser prioridade para mim.</div>
+    </div>
+
+  </div>
+  <script>
+function toggleCuriosidades() {
+  document
+    .querySelector('.curiosidades-lateral')
+    .classList.toggle('open');
+}
+
+function toggleMsg(event, element) {
+  event.stopPropagation();
+
+  const msg = element.querySelector('.msg');
+
+  document.querySelectorAll('.msg').forEach(m => {
+    if (m !== msg) m.style.display = 'none';
+  });
+
+  msg.style.display =
+    msg.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</div>
 
   <header>
     <h1>Nossa História</h1>
