@@ -279,21 +279,67 @@
     font-family: 'Cormorant Garamond', serif;
 }
 
-.video-lateral {
+
+/* painel lateral flores */
+
+.flores-lateral {
   position: fixed;
   left: 0;
-  bottom: 20px;
-  width: 220px;
-  background: rgba(0,0,0,0.15);
-  padding: 8px;
+  top: 10%;
+  width: 55px;
+  background: #f67524;
   border-radius: 0 16px 16px 0;
-  box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
-  z-index: 998;
+  box-shadow: -4px 6px 18px rgba(0,0,0,0.2);
+  transition: width 0.4s ease;
+  overflow: hidden;
+  z-index: 999;
 }
 
-.video-lateral video {
-  width: 100%;
+.flores-lateral.open {
+  width: 450px;
+}
+
+.flores-titulo {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  padding: 16px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* lista */
+.flores-lista {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+}
+
+.flores-lateral.open .flores-lista {
+  opacity: 1;
+}
+
+.flor-item {
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.flor-msg {
+ display: none;
+  margin-top: 6px;
+  background: rgba(255,248,240,0.85);
+  backdrop-filter: blur(4px);
+  color: #333;
+  padding: 8px 10px;
   border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+   text-align: justify;
+   font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 </style>
@@ -303,12 +349,78 @@
 </head>
 <body>
 
-  <div class="video-lateral">
-  <video controls>
-    <source src="video.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo.
-  </video>
+  <div class="flores-lateral">
+
+  <div class="flores-titulo" onclick="toggleFlores()">
+    Memórias Floridas. 🌼 
+  </div>
+
+  <div class="flores-lista">
+
+    <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 23 de Agosto de 2025
+      <div class="flor-msg">O dia em que te entreguei flores pela primeira vez.</div>
+    </div>
+
+    <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 06 de Setembro de 2025
+      <div class="flor-msg">Porque era nossa primeira vez no teatro.</div>
+    </div>
+
+    <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 18 de Setembro de 2025
+      <div class="flor-msg">Porque você disse que amava aquele perfume.</div>
+    </div>
+
+    <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 27 de Setembro de 2025
+      <div class="flor-msg">Você estava meio triste.</div>
+    </div>
+
+     <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 09 de Outubro de 2025
+      <div class="flor-msg">Nosso amor florescendo ainda mais.</div>
+    </div>
+     <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 27 de Outubro de 2025
+      <div class="flor-msg">Era nossa segunda vez no teatro.</div>
+    </div>
+
+     <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 18 de Novembro de 2025
+      <div class="flor-msg">Era sua apresentação do TCC.</div>
+    </div>
+
+     <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 28 de Novembro de 2025
+      <div class="flor-msg">Nosso pedido de namoro.</div>
+    </div>
+     <div class="flor-item" onclick="toggleFlor(this)">
+      🌼 26 de Fevereiro 2026
+      <div class="flor-msg">Porque estava com saudade e precisava começar o ano bem.</div>
+    </div>
+
+  </div>
 </div>
+
+<script>
+function toggleFlores() {
+  document
+    .querySelector('.flores-lateral')
+    .classList.toggle('open');
+}
+
+function toggleFlor(element) {
+  const msg = element.querySelector('.flor-msg');
+
+  document.querySelectorAll('.flor-msg').forEach(m => {
+    if (m !== msg) m.style.display = 'none';
+  });
+
+  msg.style.display =
+    msg.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 
   <div class="curiosidades-lateral">
 
